@@ -76,4 +76,4 @@ rohan = newskills(4739028739205, "qpmzj@example.com")
 # Print the student details as a tuple
 print(rohan.return_students())  # Output: (4739028739205, 'qpmzj@example.com')
 
-# Variables inside a class are called class variables
+# Variables inside a class are called class object variables

@@ -1,0 +1,2 @@
+# Basics of OOP in Python and API Fetching
+This repository provides a comprehensive introduction to the basics of Object-Oriented Programming (OOP) in Python, along with practical examples of API fetching. It covers key OOP concepts such as classes, objects, inheritance, and polymorphism, helping you build a strong foundation in Python programming. Additionally, it demonstrates how to fetch and handle data from APIs using Python’s requests library, making it an excellent resource for developers looking to integrate real-world data into their projects.

@@ -152,9 +152,6 @@ arr10 = np.zeros((3, 4, 4))
 print(arr10)
 
 
-import numpy as np
-import pandas as pd
-
 # Create a 2x3 array filled with ones
 arr = np.ones((2, 3))
 print(arr)
@@ -265,3 +262,71 @@ print(np.exp(mat1))
 
 # Apply natural logarithm to each element of the matrix
 print(np.log(mat1))
+
+# convert two dimensional array into one dimensional by flatten
+print(mat1.flatten())
+
+# Original array
+x = np.array([1, 2, 3])
+z = np.expand_dims(x, axis=0)
+# 0 rows
+print(x.ndim)
+# print("Original array shape:", x)
+
+# Expanding dimensions
+y = np.expand_dims(x, axis=1)
+
+print(y)
+print(x.ndim)
+
+
+x = np.array([[[0], [1], [2]]])
+print("Original array shape:", x.shape)
+
+# Squeezing the array
+y = np.squeeze(x)
+print("Squeezed array shape:", y.shape)
+print(y)
+
+# also having a repeat
+
+arr21 = np.repeat(x, 3)
+print(arr21)
+
+arr22 = np.roll(x, 2)
+print(arr22)
+
+# diagonally
+# arr23 = np.diag(x)
+# print(arr23)
+# binary opertaions
+mat5 = np.random.randint(1, 50, (3, 4))
+mat6 = np.random.randint(50, 100, (3, 4))
+print(mat5 + mat6)
+print(mat5 * mat6)
+print(mat6 - mat5)
+print(mat5 / mat6)
+print(mat5 | mat6)
+print(mat5 > mat6)
+print(~ mat6)
+
+
+# numpy string functions
+str_arr = np.array(["mohit", "developers"])
+print(str_arr)
+str_arr2 = np.char.upper(str_arr)
+print(str_arr2)
+str_arr3 = np.char.title(str_arr)
+str_arr24 = np.char.capitalize(str_arr)
+print(str_arr24)
+print(str_arr3)
+
+print(np.sin(mat1))
+print(np.cos(mat1))
+print(np.tan(mat1))
+print(np.log10(mat1))
+print(np.min(mat1))
+print(np.max(mat1))
+print(np.var(mat1))
+print(np.mean(mat1))
+print(np.std(mat1))

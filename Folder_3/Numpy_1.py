@@ -14,6 +14,7 @@
 # Solving numerical problems in Python using these libraries
 
 # Importing numpy for array and matrix operations
+import pandas as pd
 import numpy as np
 
 # Creating a list
@@ -140,52 +141,127 @@ print(list_from_array)  # Output: [1, 2, 3, 4, 5]
 linespaces = np.linspace(1, 8, 12)
 print(linespaces)
 
-arr8 = np.zeros(5) 
-# one dimension 
+arr8 = np.zeros(5)
+# one dimension
 print(arr8)
-arr9 = np.zeros((3,4))
-# second dimension 
+arr9 = np.zeros((3, 4))
+# second dimension
 print(arr9)
-arr10= np.zeros((3, 4 ,4))
-#  third dimension 
+arr10 = np.zeros((3, 4, 4))
+#  third dimension
 print(arr10)
 
 
+import numpy as np
+import pandas as pd
+
+# Create a 2x3 array filled with ones
 arr = np.ones((2, 3))
 print(arr)
 
-
+# Create a 2x3x2 array filled with ones
 arr = np.ones((2, 3, 2))
 print(arr)
 
+# Multiply the array by 4
+print(arr * 4)
 
-print(arr *4)
-
-# empty array create kar rahe hain 
+# Create an empty 2x2 array with integer type
 arr = np.empty((2, 2), dtype=int)
 print(arr)
 
-# identity marix in numpy
-np.eye(3,2)
+# Create a 3x2 identity matrix
+print(np.eye(3, 2))
 
-# logspaces
-np.logspace(3,2 , 10)
-np.logspace(3, 2 , base= 2)
+# Generate 10 numbers between 10^3 and 10^2
+print(np.logspace(3, 2, 10))
 
-# function used in AI 
-arr11 = np.random.randn(3,4)
-# generate that data which mean is 0 and standard deviation is 1
+# Generate 10 numbers between 2^3 and 2^2
+print(np.logspace(3, 2, 10, base=2))
+
+# Generate a 3x4 array with random numbers from a normal distribution
+arr11 = np.random.randn(3, 4)
+# The data has a mean of 0 and standard deviation of 1
 print(arr11)
-import pandas as pd
-import csv
+
+# Convert the array to a DataFrame for better visualization
 print(pd.DataFrame(arr11))
 
-arr12 = np.random.rand(3,4)
+# Generate a 3x4 array with random numbers between 0 and 1
+arr12 = np.random.rand(3, 4)
 print(arr12)
-arr13 =  np.random.randint(1, 1111 , (300, 400))
+
+# Generate a 300x400 array with random integers between 1 and 1110
+arr13 = np.random.randint(1, 1111, (300, 400))
+# Save the array to a CSV file (commented out)
 # print(pd.DataFrame(arr13)).to_csv("text.csv")
 
-# reshape your data 
-print(arr12.reshape(6,2))
+# Reshape the 3x4 array to a 6x2 array
+print(arr12.reshape(6, 2))
+
+# Access the element at row 0, column 1
 print(arr12[0][1])
 
+# Generate a 5x5 array with random integers between 1 and 99
+arr14 = np.random.randint(1, 100, (5, 5))
+print(arr14)
+
+# Print a boolean array where elements are greater than 50
+print(arr14 > 50)
+
+# Print elements of the array that are greater than 50
+print(arr14[arr14 > 50])
+
+# Access a subarray from row 2 to 3 and columns 1 and 2
+print(arr14[2:4, [1, 2]])
+
+# Access the element at row 0, column 0
+print(arr14[0][0])
+
+# Add two arrays (commented out)
+# print(arr13 + arr14)
+# Check if the dimensions are the same
+
+# Generate two matrices for multiplication
+mat1 = np.random.randint(1, 50, (3, 4))
+mat2 = np.random.randint(50, 100, (4, 3))
+print(mat1)
+print(mat2)
+
+# Matrix multiplication using @ operator
+print(mat1 @ mat2)
+
+# Division by zero (will raise an error)
+print(mat1 / 0)
+
+# Add 100 to each element of the matrix
+print(mat1 + 100)
+
+# Square each element of the matrix
+print(mat1 ** 2)
+
+# Create a 4x3 array filled with zeros
+mat5 = np.zeros((4, 3))
+print(mat5)
+
+# Create a 1D array
+zrr16 = np.array([1, 2, 3])
+
+# Row-wise broadcasting
+print(mat5 + zrr16)
+
+# Create a 2D array and transpose it
+zrr18 = np.array([[1, 2, 3]])
+print(zrr18.T)
+
+# Broadcasting with a 2D array
+print(mat5 + zrr18)
+
+# Apply square root to each element of the matrix
+print(np.sqrt(mat1))
+
+# Apply exponential function to each element of the matrix
+print(np.exp(mat1))
+
+# Apply natural logarithm to each element of the matrix
+print(np.log(mat1))
